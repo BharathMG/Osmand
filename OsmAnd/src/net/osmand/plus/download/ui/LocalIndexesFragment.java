@@ -595,9 +595,7 @@ public class LocalIndexesFragment extends OsmandExpandableListFragment implement
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		if (asyncLoader != null && asyncLoader.getStatus() == AsyncTask.Status.RUNNING) {
-			asyncLoader.cancel(true);
-		}
+		asyncLoader.cancel(true);
 	}
 
 
